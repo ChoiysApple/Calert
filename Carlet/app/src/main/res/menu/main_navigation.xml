@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_browse"
+        android:icon="@drawable/browse_icon"
+        android:title="Browse" />
+
+    <item
+        android:id="@+id/navigation_shape"
+        android:icon="@drawable/shape_icon"
+        android:title="Shape" />
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/settings_icon"
+        android:title="Settings" />
+
+
+</menu>
