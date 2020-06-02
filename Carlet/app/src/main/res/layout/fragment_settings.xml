@@ -13,37 +13,46 @@
             android:id="@+id/btn_GPS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="GPS authority"
-            android:background="@android:color/white" />
+            android:text="     GPS authority"
+            android:gravity="left|center_vertical"
+            android:background="@android:color/white"/>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/colorGrey"/>
+            android:background="@color/colorGrey"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="1dp"/>
 
         <Button
             android:id="@+id/btn_DarkMode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dark mode"
+            android:text="     Dark mode"
+            android:gravity="left|center_vertical"
             android:background="@android:color/white" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/colorGrey"/>
+            android:background="@color/colorGrey"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="1dp"/>
 
         <Button
             android:id="@+id/btn_Credit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Credits"
+            android:text="     Credits"
+            android:gravity="left|center_vertical"
             android:background="@android:color/white" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/colorGrey"/>
+            android:background="@color/colorGrey"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="1dp" />
 
     </LinearLayout>
 

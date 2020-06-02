@@ -5,12 +5,14 @@
     android:layout_width="match_parent"
     android:padding="6dp"
     android:orientation="vertical">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Browse Lights"
         android:textColor="@color/colorPrimary"
-        android:textSize="20sp"></TextView>
+        android:textSize="20sp">
+    </TextView>
 
     <View
         android:layout_width="match_parent"
@@ -30,10 +32,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:columnWidth="110dp"
-        android:numColumns="auto_fit"
+        android:numColumns="3"
         android:stretchMode="columnWidth"
-        android:verticalSpacing="15dp"
-        android:horizontalSpacing="15dp"
-        android:gravity="center" />
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="35dp"
+        android:gravity="center"
+        android:paddingLeft="3dp"
+        android:clickable="true"
+        android:background="#E7E7E7"/>
 
 </LinearLayout>
