@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,8 +24,9 @@ public class BrowseFragment extends Fragment {
         SymbolDataManager dataManager = new SymbolDataManager();
         ArrayList<Symbol> symbolArrayList = dataManager.getSymbols();
 
-
-
+        GridView gv = view.findViewById(R.id.mygrid);
+        gv.setAdapter(new SetImageAdapter(view.getContext()));
         return view;
+
     }
 }
