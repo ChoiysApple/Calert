@@ -33,6 +33,7 @@ public class SetImageAdapter extends BaseAdapter {
             R.drawable.symbol61,R.drawable.symbol62,R.drawable.symbol63,
             R.drawable.symbol64
     };
+
     private Context Cont;
 
     public SetImageAdapter(Context c) {

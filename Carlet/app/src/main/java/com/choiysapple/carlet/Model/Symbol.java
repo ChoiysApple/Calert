@@ -1,7 +1,9 @@
 package com.choiysapple.carlet.Model;
 
+import java.io.Serializable;
+
 // Symbol data format
-public class Symbol {
+public class Symbol implements Serializable {
     public String name;
     public String img;
     public String color;

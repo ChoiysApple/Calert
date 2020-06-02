@@ -27,6 +27,5 @@ public class BrowseFragment extends Fragment {
         GridView gv = view.findViewById(R.id.mygrid);
         gv.setAdapter(new SetImageAdapter(view.getContext()));
         return view;
-
     }
 }

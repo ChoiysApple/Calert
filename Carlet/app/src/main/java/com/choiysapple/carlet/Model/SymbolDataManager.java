@@ -2,9 +2,10 @@ package com.choiysapple.carlet.Model;
 
 import android.util.Log;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class SymbolDataManager {
+public class SymbolDataManager implements Serializable {
 
     private ArrayList<Symbol> symbols = new ArrayList<Symbol>();
 
@@ -76,17 +77,15 @@ public class SymbolDataManager {
         symbols.add(new Symbol("자동 와이퍼 작동", "symbol64", "yellow", "all", ""));
     }
 
-
-
     // for Shape search
     public ArrayList<Symbol> getShapeSearchResult(String color, String shape){
         ArrayList<Symbol> result = (ArrayList<Symbol>) symbols.clone();
 
         int index = 0;
         ArrayList<Integer> target = new ArrayList<Integer>();
-        Log.d("loop", Integer.toString(result.size()));
+        String msg_result = "<Result>\n";
 
-        // delete symbol objects not matches to shape & color
+        // find indices od symbol objects not matches to shape & color
         for (Symbol element : symbols){
 
             // condition check
@@ -96,11 +95,19 @@ public class SymbolDataManager {
             index++;
         }
 
+        // delete
         for (Integer i: target){
-            result.remove(i);
+            Log.d("", String.valueOf(i));
+            result.remove(symbols.get(i));
         }
 
-        Log.d("Shape Search Result:", result.toString());
+        index = 0;
+        for (Symbol element: result){
+            msg_result += (Integer.toString(index+1)+") "+element.name + " " + element.description +"\n");
+            index++;
+        }
+
+        Log.d(color+shape+":", msg_result);
         return result;
     }
 
