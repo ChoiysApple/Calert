@@ -55,126 +55,81 @@ public class ShapeFragment extends Fragment{
         btn_reset = view.findViewById(R.id.btn_reset);
 
 
-        // [START] Color Buttons
-        btn_red.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String msg = "";
-                msg+="red";
-
-                btn_red.setVisibility(View.VISIBLE);
-                btn_yellow.setVisibility(View.INVISIBLE);
-                btn_green.setVisibility(View.INVISIBLE);
-
-                Toast.makeText(getActivity(), msg, Toast.LENGTH_LONG).show();
-            }
-        });
-
-        btn_yellow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String msg = "";
-                msg+="yellow";
-
-                btn_red.setVisibility(View.INVISIBLE);
-                btn_yellow.setVisibility(View.VISIBLE);
-                btn_green.setVisibility(View.INVISIBLE);
-
-                Toast.makeText(getActivity(), msg, Toast.LENGTH_LONG).show();
-
-
-            }
-        });
-
-        btn_green.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String msg = "";
-                msg+="green";
-
-                btn_red.setVisibility(View.INVISIBLE);
-                btn_yellow.setVisibility(View.INVISIBLE);
-                btn_green.setVisibility(View.VISIBLE);
-
-                Toast.makeText(getActivity(),msg, Toast.LENGTH_LONG).show();
-
-
-            }
-        });
-        // [END] Color Buttons
-
-
-        // [START] Shape Buttons
-        btn_shape.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String msg = "";
-                msg+="shape";
-
-                btn_shape.setVisibility(View.VISIBLE);
-                btn_text.setVisibility(View.INVISIBLE);
-                btn_shapeText.setVisibility(View.INVISIBLE);
-
-                Toast.makeText(getActivity(),msg, Toast.LENGTH_LONG).show();
-
-
-            }
-        });
-
-        btn_text.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String msg = "";
-                msg+="text";
-
-                btn_shape.setVisibility(View.VISIBLE);
-                btn_text.setVisibility(View.INVISIBLE);
-                btn_shapeText.setVisibility(View.INVISIBLE);
-
-                Toast.makeText(getActivity(),msg, Toast.LENGTH_LONG).show();
-
-
-            }
-        });
-
-        btn_shapeText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String msg = "";
-                msg+="shape+text";
-
-                btn_shape.setVisibility(View.VISIBLE);
-                btn_text.setVisibility(View.INVISIBLE);
-                btn_shapeText.setVisibility(View.INVISIBLE);
-
-                Toast.makeText(getActivity(),msg, Toast.LENGTH_LONG).show();
-
-
-            }
-        });
-        // [END] Shape Buttons
-
 
         // [START] Confirm Buttons
         btn_search.setOnClickListener(new View.OnClickListener() {
+            String msg="";
             @Override
             public void onClick(View view) {
+
+                btn_red.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        msg+="red";
+                    }
+                });
+
+                btn_yellow.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        msg+="yellow";
+                    }
+                });
+
+                btn_green.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        msg+="green";
+
+                    }
+                });
+                // [END] Color Buttons
+
+
+                // [START] Shape Buttons
+                btn_shape.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        msg+="shape";
+
+                    }
+                });
+
+                btn_text.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        msg+="text";
+                    }
+                });
+
+                btn_shapeText.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        msg+="shape+text";
+
+                    }
+                });
+                // [END] Shape Buttons
+
+                Toast.makeText(getActivity(), msg, Toast.LENGTH_LONG).show();
                 Log.d("Shape", dataManager.getShapeSearchResult("red", "shape").toString());
 //                Log.d("Keyword", dataManager.getTextSearchResult("경고").toString());
 //                Log.d("Browse", dataManager.getSymbols().get(34).name.toString());
 
 
+                btn_reset.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        msg = "";
+
+                    }
+                });
+
 
             }
         });
 
-        btn_reset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-
-            }
-        });
         // [END] Confirm Buttons
 
 
