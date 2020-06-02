@@ -1,5 +1,7 @@
 package com.choiysapple.carlet.Model;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 
 public class SymbolDataManager {
@@ -77,10 +79,20 @@ public class SymbolDataManager {
 
     // for Shape search
     public ArrayList<Symbol> getShapeSearchResult(String color, String shape){
-        ArrayList<Symbol> result = new ArrayList<Symbol>();
+        ArrayList<Symbol> result = (ArrayList<Symbol>) symbols.clone();
 
-        //TODO 1: delete symbol objects not matches to shape & color
+        int index = 0;
 
+        // delete symbol objects not matches to shape & color
+        for (Symbol element : result){
+            // condition check
+            if(element.color != color || element.shape != shape) {
+                result.remove(result.get(index));
+            }
+            index++;
+        }
+
+        Log.d("Shape Search Result:", result.toString());
         return result;
     }
 
@@ -88,12 +100,24 @@ public class SymbolDataManager {
     public ArrayList<Symbol> getTextSearchResult(String keyword){
         ArrayList<Symbol> result = new ArrayList<Symbol>();
 
-        //TODO 2: return symbols whose name contains keyword
+        int index = 0;
+
+        // return symbols whose name contains keyword
+        for (Symbol element : result){
+            // condition check
+            if(element.name.contains(keyword)) {
+                result.remove(result.get(index));
+            }
+            index++;
+        }
+
+        Log.d("Text Search Result:", result.toString());
         return  result;
     }
 
     // return all symbol array data
     public ArrayList<Symbol> getSymbols() {
+        Log.d("get Symbols:", symbols.toString());
         return symbols;
     }
 }
