@@ -40,10 +40,11 @@
             android:layout_marginTop="12dp"
             android:textColor="@color/colorDarkGrey"
             android:text="Color"
+            android:textStyle="bold"
             android:textSize="20sp">
         </TextView>
 
-        //Color 옵션 버튼 - 빨/노/초
+        // Color 옵션 버튼 - 빨/노/초
         <LinearLayout
             android:layout_width="400dp"
             android:layout_height="150dp"
@@ -58,8 +59,9 @@
                 android:padding="5dp"
                 android:text="RED"
                 android:textColor="@android:color/holo_red_light"
-                android:textSize="15sp"
+                android:textSize="15dp"
                 android:background="@drawable/button_shape" />
+
             <Button
                 android:id="@+id/btn2"
                 android:layout_width="100dp"
@@ -67,10 +69,11 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:text="YELLO"
+                android:text="YELLOW"
                 android:textColor="@android:color/holo_orange_light"
-                android:textSize="15sp"
+                android:textSize="15dp"
                 android:background="@drawable/button_shape" />
+
             <Button
                 android:id="@+id/btn3"
                 android:layout_width="100dp"
@@ -80,7 +83,7 @@
                 android:layout_marginRight="15dp"
                 android:text="GREEN"
                 android:textColor="@android:color/holo_green_light"
-                android:textSize="15sp"
+                android:textSize="15dp"
                 android:background="@drawable/button_shape" />
         </LinearLayout>
 
@@ -90,6 +93,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/colorDarkGrey"
             android:text="Shape"
+            android:textStyle="bold"
             android:textSize="20sp">
         </TextView>
 
@@ -139,6 +143,7 @@
             android:layout_height="wrap_content"
             android:textColor="@android:color/darker_gray"
             android:text="When nothing selected, search everything from the category"
+            android:textStyle="bold"
             android:textAlignment="center"
             android:textSize="12sp">
         </TextView>
@@ -149,6 +154,7 @@
             android:layout_height="100dp"
             android:layout_marginTop="40dp"
             android:orientation="horizontal">
+
             <Button
                 android:id="@+id/btn_search"
                 android:layout_width="170dp"
@@ -158,7 +164,9 @@
                 android:layout_marginRight="10dp"
                 android:text="Search"
                 android:textSize="15sp"
-                android:background="@drawable/search_reset_button_shape" />
+                android:textColor="@android:color/white"
+                android:background="@drawable/search_button_shape" />
+
             <Button
                 android:id="@+id/btn_reset"
                 android:layout_width="170dp"
@@ -168,7 +176,7 @@
                 android:layout_marginRight="25dp"
                 android:text="Reset"
                 android:textSize="15sp"
-                android:background="@drawable/search_reset_button_shape" />
+                android:background="@drawable/reset_button_shape" />
         </LinearLayout>
 
     </LinearLayout>

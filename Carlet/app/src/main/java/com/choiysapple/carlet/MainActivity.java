@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.mainFrame, browseFragment).commitAllowingStateLoss();
 
 
+        // bottom navigation click action
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
