@@ -9,7 +9,7 @@ public class SymbolDataManager {
     private ArrayList<Symbol> symbols = new ArrayList<Symbol>();
 
     // Symbols data
-    public void SymbolDataManager() {
+    public SymbolDataManager() {
         symbols.add(new Symbol("전면 안개등", "symbol1", "green", "shape", "전면 안개등 이상 발생")); // 1
         symbols.add(new Symbol("파워 스티어링 경고", "symbol2", "red", "shape", "전동 파워 스티어링 시스템 문제 발생"));
         symbols.add(new Symbol("후면 안개등", "symbol3", "yellow", "shape", "후면 안개등 이상 발생"));
@@ -77,19 +77,27 @@ public class SymbolDataManager {
     }
 
 
+
     // for Shape search
     public ArrayList<Symbol> getShapeSearchResult(String color, String shape){
         ArrayList<Symbol> result = (ArrayList<Symbol>) symbols.clone();
 
         int index = 0;
+        ArrayList<Integer> target = new ArrayList<Integer>();
+        Log.d("loop", Integer.toString(result.size()));
 
         // delete symbol objects not matches to shape & color
-        for (Symbol element : result){
+        for (Symbol element : symbols){
+
             // condition check
             if(element.color != color || element.shape != shape) {
-                result.remove(result.get(index));
+                target.add(index);
             }
             index++;
+        }
+
+        for (Integer i: target){
+            result.remove(i);
         }
 
         Log.d("Shape Search Result:", result.toString());
@@ -98,17 +106,22 @@ public class SymbolDataManager {
 
     // for search by text
     public ArrayList<Symbol> getTextSearchResult(String keyword){
+
         ArrayList<Symbol> result = new ArrayList<Symbol>();
 
         int index = 0;
-
+        ArrayList<Integer> target = new ArrayList<Integer>();
         // return symbols whose name contains keyword
-        for (Symbol element : result){
+        for (Symbol element : symbols){
             // condition check
             if(element.name.contains(keyword)) {
-                result.remove(result.get(index));
+                target.add(index);
             }
             index++;
+        }
+
+        for (Integer i: target){
+            result.remove(i);
         }
 
         Log.d("Text Search Result:", result.toString());
