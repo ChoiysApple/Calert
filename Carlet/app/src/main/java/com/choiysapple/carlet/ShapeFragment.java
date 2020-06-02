@@ -21,13 +21,14 @@ import android.widget.Toast;
 public class ShapeFragment extends Fragment{
 
 
-    Button btn1;
-    Button btn2;
-    Button btn3;
+    Button btn_red;
+    Button btn_yellow;
+    Button btn_green;
 
     Button btn_shape;
     Button btn_text;
     Button btn_shapeText;
+
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -35,69 +36,58 @@ public class ShapeFragment extends Fragment{
         View view = inflater.inflate(R.layout.fragment_shape, container, false);
 
         // color category button
-        btn1 = view.findViewById(R.id.btn1);
-        btn2 = view.findViewById(R.id.btn2);
-        btn3 = view.findViewById(R.id.btn3);
+        btn_red = view.findViewById(R.id.btn_red);
+        btn_yellow = view.findViewById(R.id.btn_yellow);
+        btn_green = view.findViewById(R.id.btn_green);
 
         // shape category button
         btn_shape = view.findViewById(R.id.btn_shape);
         btn_text = view.findViewById(R.id.btn_text);
         btn_shapeText = view.findViewById(R.id.btn_shapeText);
 
-//        GridView gv = findViewById(R.id.mygrid);
-//        gv.setAdapter(new SetImageAdapter(this));
-
-        btn1.setOnClickListener(new View.OnClickListener() {
+        btn_red.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String msg = "";
                 msg+="red";
 
-                btn1.setVisibility(View.VISIBLE);
-                btn2.setVisibility(View.INVISIBLE);
-                btn3.setVisibility(View.INVISIBLE);
+                btn_red.setVisibility(View.VISIBLE);
+                btn_yellow.setVisibility(View.INVISIBLE);
+                btn_green.setVisibility(View.INVISIBLE);
 
                 Toast.makeText(getActivity(), msg, Toast.LENGTH_LONG).show();
-
-//                Intent intent = new Intent(getActivity(),SetImageAdapter.class);
-//                intent.putExtra("msg",msg);
-//                startActivity(intent);
             }
         });
 
-        btn2.setOnClickListener(new View.OnClickListener() {
+        btn_yellow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String msg = "";
                 msg+="yellow";
 
-                btn1.setVisibility(View.INVISIBLE);
-                btn2.setVisibility(View.VISIBLE);
-                btn3.setVisibility(View.INVISIBLE);
+                btn_red.setVisibility(View.INVISIBLE);
+                btn_yellow.setVisibility(View.VISIBLE);
+                btn_green.setVisibility(View.INVISIBLE);
 
                 Toast.makeText(getActivity(), msg, Toast.LENGTH_LONG).show();
 
-//                Intent intent = new Intent(getActivity(),SetImageAdapter.class);
-//                intent.putExtra("msg",msg);
-//                startActivity(intent);
+
             }
         });
 
-        btn3.setOnClickListener(new View.OnClickListener() {
+        btn_green.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String msg = "";
                 msg+="green";
 
-                btn1.setVisibility(View.INVISIBLE);
-                btn2.setVisibility(View.INVISIBLE);
-                btn3.setVisibility(View.VISIBLE);
+                btn_red.setVisibility(View.INVISIBLE);
+                btn_yellow.setVisibility(View.INVISIBLE);
+                btn_green.setVisibility(View.VISIBLE);
 
                 Toast.makeText(getActivity(),msg, Toast.LENGTH_LONG).show();
 
-//                Intent intent = new Intent(getActivity(),SetImageAdapter.class);
-//                intent.putExtra("msg",msg);
-//                startActivity(intent);
+
             }
         });
 
@@ -113,9 +103,7 @@ public class ShapeFragment extends Fragment{
 
                 Toast.makeText(getActivity(),msg, Toast.LENGTH_LONG).show();
 
-//                Intent intent = new Intent(getActivity(),SetImageAdapter.class);
-//                intent.putExtra("msg",msg);
-//                startActivity(intent);
+
             }
         });
 
@@ -131,9 +119,7 @@ public class ShapeFragment extends Fragment{
 
                 Toast.makeText(getActivity(),msg, Toast.LENGTH_LONG).show();
 
-//                Intent intent = new Intent(getActivity(),SetImageAdapter.class);
-//                intent.putExtra("msg",msg);
-//                startActivity(intent);
+
             }
         });
 
@@ -149,9 +135,7 @@ public class ShapeFragment extends Fragment{
 
                 Toast.makeText(getActivity(),msg, Toast.LENGTH_LONG).show();
 
-//                Intent intent = new Intent(getActivity(),SetImageAdapter.class);
-//                intent.putExtra("msg",msg);
-//                startActivity(intent);
+
             }
         });
         return view;
