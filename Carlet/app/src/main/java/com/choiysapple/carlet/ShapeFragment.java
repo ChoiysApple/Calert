@@ -27,6 +27,7 @@ public class ShapeFragment extends Fragment{
     Button btn_red;
     Button btn_yellow;
     Button btn_green;
+    Button btn_other;
 
     // shape buttons
     Button btn_shape;
@@ -48,6 +49,7 @@ public class ShapeFragment extends Fragment{
         btn_red = view.findViewById(R.id.btn_red);
         btn_yellow = view.findViewById(R.id.btn_yellow);
         btn_green = view.findViewById(R.id.btn_green);
+        btn_other = view.findViewById(R.id.btn_other);
         btn_shape = view.findViewById(R.id.btn_shape);
         btn_text = view.findViewById(R.id.btn_text);
         btn_shapeText = view.findViewById(R.id.btn_shapeText);
@@ -83,6 +85,14 @@ public class ShapeFragment extends Fragment{
 
                     }
                 });
+
+                btn_other.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        msg+="other";
+
+                    }
+                });
                 // [END] Color Buttons
 
 
@@ -90,7 +100,7 @@ public class ShapeFragment extends Fragment{
                 btn_shape.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        msg+="shape";
+                        msg+=" shape";
 
                     }
                 });
@@ -98,14 +108,14 @@ public class ShapeFragment extends Fragment{
                 btn_text.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        msg+="text";
+                        msg+=" text";
                     }
                 });
 
                 btn_shapeText.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        msg+="shape+text";
+                        msg+=" shape+text";
 
                     }
                 });
