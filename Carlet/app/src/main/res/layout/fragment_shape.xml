@@ -8,4 +8,170 @@
         android:layout_height="wrap_content"
         android:text="shape"/>
 
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:padding="6dp"
+        android:orientation="vertical">
+
+        //Shape Search
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="Shape Search"
+            android:textSize="20sp">
+        </TextView>
+
+        //Shape Search 밑 회색줄
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_centerInParent="true"
+            android:background="@color/colorGrey"/>
+
+        //Color 옵션
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/colorDarkGrey"
+            android:text="Color"
+            android:textSize="20sp">
+        </TextView>
+
+        //Color 옵션 버튼 - 빨/노/초
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:text="RED"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="15sp"
+                android:background="@drawable/button_shape" />
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="YELLO"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="15sp"
+                android:background="@drawable/button_shape" />
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:text="GREEN"
+                android:textColor="@android:color/holo_green_light"
+                android:textSize="15sp"
+                android:background="@drawable/button_shape" />
+        </LinearLayout>
+
+        //Shape 옵션
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorDarkGrey"
+            android:text="Shape"
+            android:textSize="20sp">
+        </TextView>
+
+        //Shape 옵션 버튼 - shape/text/shape+text
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_shape"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="10dp"
+                android:text="Shape"
+                android:textSize="15sp"
+                android:textColor="@color/colorDarkGrey"
+                android:background="@drawable/button_shape" />
+            <Button
+                android:id="@+id/btn_text"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Text"
+                android:textSize="15sp"
+                android:textColor="@color/colorDarkGrey"
+                android:background="@drawable/button_shape" />
+            <Button
+                android:id="@+id/btn_shapeText"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:text="Shape+Text"
+                android:textSize="15sp"
+                android:textColor="@color/colorDarkGrey"
+                android:background="@drawable/button_shape" />
+        </LinearLayout>
+
+        //안내문 When nothing selected, search everything from the category
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/darker_gray"
+            android:text="When nothing selected, search everything from the category"
+            android:textAlignment="center"
+            android:textSize="12sp">
+        </TextView>
+
+        // Search/Reset 버튼
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:text="Search"
+                android:textSize="15sp"
+                android:background="@drawable/search_reset_button_shape" />
+            <Button
+                android:id="@+id/btn_reset"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="25dp"
+                android:text="Reset"
+                android:textSize="15sp"
+                android:background="@drawable/search_reset_button_shape" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
 </FrameLayout>
