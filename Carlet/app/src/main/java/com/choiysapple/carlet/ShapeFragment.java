@@ -1,6 +1,9 @@
 package com.choiysapple.carlet;
 
+import com.choiysapple.carlet.Model.*;
+
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,31 +23,39 @@ import android.widget.Toast;
 
 public class ShapeFragment extends Fragment{
 
-
+    // color buttons
     Button btn_red;
     Button btn_yellow;
     Button btn_green;
 
+    // shape buttons
     Button btn_shape;
     Button btn_text;
     Button btn_shapeText;
+
+    // Confirm buttons
+    Button btn_search;
+    Button btn_reset;
 
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_shape, container, false);
+        final SymbolDataManager dataManager = new SymbolDataManager();
 
-        // color category button
+        // Buttons
         btn_red = view.findViewById(R.id.btn_red);
         btn_yellow = view.findViewById(R.id.btn_yellow);
         btn_green = view.findViewById(R.id.btn_green);
-
-        // shape category button
         btn_shape = view.findViewById(R.id.btn_shape);
         btn_text = view.findViewById(R.id.btn_text);
         btn_shapeText = view.findViewById(R.id.btn_shapeText);
+        btn_search = view.findViewById(R.id.btn_search);
+        btn_reset = view.findViewById(R.id.btn_reset);
 
+
+        // [START] Color Buttons
         btn_red.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,7 +101,10 @@ public class ShapeFragment extends Fragment{
 
             }
         });
+        // [END] Color Buttons
 
+
+        // [START] Shape Buttons
         btn_shape.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -138,6 +152,35 @@ public class ShapeFragment extends Fragment{
 
             }
         });
+        // [END] Shape Buttons
+
+
+        // [START] Confirm Buttons
+        btn_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("Shape", dataManager.getShapeSearchResult("red", "shape").toString());
+//                Log.d("Keyword", dataManager.getTextSearchResult("경고").toString());
+//                Log.d("Browse", dataManager.getSymbols().get(34).name.toString());
+
+
+
+            }
+        });
+
+        btn_reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+            }
+        });
+        // [END] Confirm Buttons
+
+
+
+
+
         return view;
     }
 
