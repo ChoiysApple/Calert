@@ -52,7 +52,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btn1"
+                android:id="@+id/btn_red"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="25dp"
@@ -65,7 +65,7 @@
                 android:textSize="15dp" />
 
             <Button
-                android:id="@+id/btn2"
+                android:id="@+id/btn_yellow"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="10dp"
@@ -77,7 +77,7 @@
                 android:textSize="15dp" />
 
             <Button
-                android:id="@+id/btn3"
+                android:id="@+id/btn_green"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="10dp"
