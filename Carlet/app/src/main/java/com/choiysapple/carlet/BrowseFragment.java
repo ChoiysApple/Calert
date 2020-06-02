@@ -9,9 +9,22 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.choiysapple.carlet.Model.Symbol;
+import com.choiysapple.carlet.Model.SymbolDataManager;
+
+import java.util.ArrayList;
+
 public class BrowseFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_browse, container, false);
+        View view = inflater.inflate(R.layout.fragment_browse, container, false);
+
+
+        SymbolDataManager dataManager = new SymbolDataManager();
+        ArrayList<Symbol> symbolArrayList = dataManager.getSymbols();
+
+
+
+        return view;
     }
 }
