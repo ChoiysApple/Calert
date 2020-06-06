@@ -14,8 +14,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="     GPS authority"
+            android:textSize="18sp"
+            android:textColor="@color/colorDarkGrey"
             android:gravity="left|center_vertical"
-            android:background="@android:color/white"/>
+            android:background="@android:color/white"
+            android:drawableRight="@drawable/settings_arrow"/>
 
         <View
             android:layout_width="match_parent"
@@ -29,8 +32,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="     Dark mode"
+            android:textSize="18sp"
+            android:textColor="@color/colorDarkGrey"
             android:gravity="left|center_vertical"
-            android:background="@android:color/white" />
+            android:background="@android:color/white"
+            android:drawableRight="@drawable/settings_arrow"/>
 
         <View
             android:layout_width="match_parent"
@@ -44,8 +50,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="     Credits"
+            android:textSize="18sp"
+            android:textColor="@color/colorDarkGrey"
             android:gravity="left|center_vertical"
-            android:background="@android:color/white" />
+            android:background="@android:color/white"
+            android:drawableRight="@drawable/settings_arrow"/>
 
         <View
             android:layout_width="match_parent"
