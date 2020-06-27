@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 public class ShapeFragment extends Fragment{
 
+<<<<<<< HEAD
     // color buttons
     Button btn_red;
     Button btn_yellow;
@@ -36,6 +37,12 @@ public class ShapeFragment extends Fragment{
     // options
     String msg_color;
     String msg_shape;
+=======
+    Button btn_red, btn_yellow, btn_green, btn_other;       // color buttons
+    Button btn_shape, btn_text, btn_shapeText;              // shape buttons
+    Button btn_search, btn_reset;                           // Confirm buttons
+    String msg_color = "all", msg_shape = "all";            // options
+>>>>>>> ccf84b52df5f42224ff71dcfb9f11e1248acb39a
 
 
     @Override
@@ -87,6 +94,14 @@ public class ShapeFragment extends Fragment{
             public void onClick(View view) {
                 msg_color = "other";
                 btn_other.setSelected(true);
+
+            }
+        });
+
+        btn_other.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                msg_color = "other";
 
             }
         });

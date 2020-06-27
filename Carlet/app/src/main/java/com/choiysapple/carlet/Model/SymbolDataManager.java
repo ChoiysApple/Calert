@@ -59,7 +59,7 @@ public class SymbolDataManager implements Serializable {
         symbols.add(new Symbol("경제운전 지시기", "symbol46", "green", "text", ""));
         symbols.add(new Symbol("내리막길 주행 제어 장치", "symbol47", "yellow", "shape", ""));
         symbols.add(new Symbol("온도 주의", "symbol48", "red", "shape", "엔진 과열 주의"));
-        symbols.add(new Symbol("ABS 잠김 방지 브레이크 경고", "symbol49", "yellow", "all", "ABS 기능에 문제 발생"));
+        symbols.add(new Symbol("ABS 잠김 방지 브레이크 경고", "symbol49", "yellow", "other", "ABS 기능에 문제 발생"));
         symbols.add(new Symbol("연료 필터 주의", "symbol50", "yellow", "shape", "연료 필터에 수분 혼입됨")); // 50
         symbols.add(new Symbol("문 열림", "symbol51", "red", "shape", "문이 제대로 닫히지 않았을 때 경고"));
         symbols.add(new Symbol("보닛 열림", "symbol52", "red", "shape", "보닛이 열렸을 때 경고"));
@@ -74,26 +74,42 @@ public class SymbolDataManager implements Serializable {
         symbols.add(new Symbol("빗물 감지기", "symbol61", "yellow", "shape", ""));
         symbols.add(new Symbol("엔진 / 배출 경고", "symbol62", "yellow", "shape", "엔진 제어 계통에 문제 발생"));
         symbols.add(new Symbol("뒷유리창 성애 제거", "symbol63", "yellow", "shape", ""));
-        symbols.add(new Symbol("자동 와이퍼 작동", "symbol64", "yellow", "all", ""));
+        symbols.add(new Symbol("자동 와이퍼 작동", "symbol64", "yellow", "other", ""));
     }
+
+
+    /*
+    Model functions
+    */
 
     // for Shape search
     public ArrayList<Symbol> getShapeSearchResult(String color, String shape){
         ArrayList<Symbol> result = (ArrayList<Symbol>) symbols.clone();
 
         int index = 0;
+        Boolean isColorAll = false, isShapeAll = false;
         ArrayList<Integer> target = new ArrayList<Integer>();
-        String msg_result = "<Result>\n";
+        String msg_result = "<getShapeSearchResult>\n";
+
+        // check color or shape parameter is all, this will be used to following loop
+        if (color == "all")
+            isColorAll = true;
+        if (shape == "all")
+            isShapeAll = true;
 
         // find indices od symbol objects not matches to shape & color
         for (Symbol element : symbols){
 
-            // condition check
-            if(element.color != color || element.shape != shape) {
+            // condition check, skip loop when all option detected
+            if(element.color != color && !isColorAll) {
+                target.add(index);
+            }
+            else if(element.shape != shape && !isShapeAll) {
                 target.add(index);
             }
             index++;
         }
+        Log.d("Non matching symbols", target.toString());
 
         // delete
         for (Integer i: target){
@@ -103,13 +119,15 @@ public class SymbolDataManager implements Serializable {
 
         index = 0;
         for (Symbol element: result){
-            msg_result += (Integer.toString(index+1)+") "+element.name + " " + element.description +"\n");
+            msg_result += (Integer.toString(index+1)+") "+element.name + " / " + element.description +"\n");
             index++;
         }
 
-        Log.d(color+shape+":", msg_result);
+        Log.d("\n"+color+shape+":", msg_result);
         return result;
     }
+
+
 
     // for search by text
     public ArrayList<Symbol> getTextSearchResult(String keyword){
