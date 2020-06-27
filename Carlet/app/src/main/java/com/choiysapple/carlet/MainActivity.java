@@ -1,10 +1,13 @@
 package com.choiysapple.carlet;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -59,6 +62,29 @@ public class MainActivity extends AppCompatActivity {
 
     }       //[END] of OnCreate
 
+
+//    @Override
+//    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+//        switch (menuItem.getItemId()) {
+//            case R.id.nav_help:
+//                intent = new Intent(MainActivity.this, Help.class);
+//                startActivity(intent);
+//                break;
+//            case R.id.nav_logout:
+//                intent = new Intent(MainActivity.this, LoginActivity.class);
+//                startActivity(intent);
+//                break;
+//            case R.id.nav_account:
+//                intent = new Intent(MainActivity.this, MyAccount.class);
+//                startActivity(intent);
+//                break;
+//            case R.id.my_bookings:
+//                intent = new Intent(this, MyBookings.class);
+//                startActivity(intent);
+//                break;
+//        }
+//        return false;
+//    }
 
 
 }

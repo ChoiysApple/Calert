@@ -20,7 +20,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Shape Search"
+            android:layout_marginTop="8dp"
+            android:text="   Shape Search"
             android:textColor="@color/colorPrimary"
             android:textSize="20sp"
             android:textStyle="bold">
@@ -32,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_centerInParent="true"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:background="@color/colorGrey" />
 
         //Color 옵션
@@ -40,7 +41,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="20dp"
             android:text="   Color"
             android:textColor="@color/colorDarkGrey"
             android:textSize="20sp"
@@ -52,6 +53,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_marginTop="8dp"
             android:gravity="center_horizontal"
             android:orientation="horizontal">
 
@@ -64,7 +66,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/button_shape"
+                android:background="@drawable/button_effect"
                 android:padding="5dp"
                 android:text="RED"
                 android:textColor="@android:color/holo_red_light"
@@ -80,7 +82,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/button_shape"
+                android:background="@drawable/button_effect"
                 android:text="YELLOW"
                 android:textColor="@android:color/holo_orange_light"
                 android:textSize="15dp"
@@ -95,7 +97,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/button_shape"
+                android:background="@drawable/button_effect"
                 android:text="GREEN"
                 android:textColor="@android:color/holo_green_light"
                 android:textSize="15dp"
@@ -110,7 +112,7 @@
                 android:layout_marginRight="15dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/button_shape"
+                android:background="@drawable/button_effect"
                 android:text="OTHER"
                 android:textColor="@color/colorDarkGrey"
                 android:textSize="15dp"
@@ -142,7 +144,7 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/button_shape"
+                android:background="@drawable/button_effect"
                 android:text="Shape"
                 android:textColor="@color/colorDarkGrey"
                 android:textSize="15sp"
@@ -155,7 +157,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/button_shape"
+                android:background="@drawable/button_effect"
                 android:text="Text"
                 android:textColor="@color/colorDarkGrey"
                 android:textSize="15sp"
@@ -168,7 +170,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="25dp"
-                android:background="@drawable/button_shape"
+                android:background="@drawable/button_effect"
                 android:text="Shape+Text"
                 android:textColor="@color/colorDarkGrey"
                 android:textSize="15sp"
@@ -191,7 +193,7 @@
         <LinearLayout
             android:layout_width="400dp"
             android:layout_height="100dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="60dp"
             android:orientation="horizontal">
 
             <Button

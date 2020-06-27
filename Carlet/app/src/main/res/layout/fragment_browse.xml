@@ -9,23 +9,25 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Browse Lights"
+        android:layout_marginTop="8dp"
+        android:text="   Browse Lights"
         android:textColor="@color/colorPrimary"
-        android:textSize="20sp">
+        android:textSize="20sp"
+        android:textStyle="bold">
     </TextView>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_centerInParent="true"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorGrey" />
+        android:layout_marginTop="12dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="5dp">
     </TextView>
+
 
     <GridView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/mygrid"
@@ -34,11 +36,10 @@
         android:columnWidth="110dp"
         android:numColumns="3"
         android:stretchMode="columnWidth"
-        android:verticalSpacing="10dp"
-        android:horizontalSpacing="35dp"
+        android:verticalSpacing="5dp"
+        android:horizontalSpacing="5dp"
         android:gravity="center"
-        android:paddingLeft="3dp"
-        android:clickable="true"
-        android:background="#E7E7E7"/>
+        android:paddingLeft="1dp"
+        android:clickable="true" />
 
 </LinearLayout>

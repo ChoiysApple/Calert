@@ -22,6 +22,7 @@ public class ShapeFragment extends Fragment{
     Button btn_red;
     Button btn_yellow;
     Button btn_green;
+    Button btn_other;
 
     // shape buttons
     Button btn_shape;
@@ -47,6 +48,7 @@ public class ShapeFragment extends Fragment{
         btn_red = view.findViewById(R.id.btn_red);
         btn_yellow = view.findViewById(R.id.btn_yellow);
         btn_green = view.findViewById(R.id.btn_green);
+        btn_other = view.findViewById(R.id.btn_other);
         btn_shape = view.findViewById(R.id.btn_shape);
         btn_text = view.findViewById(R.id.btn_text);
         btn_shapeText = view.findViewById(R.id.btn_shapeText);
@@ -59,6 +61,7 @@ public class ShapeFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 msg_color = "red";
+                btn_red.setSelected(true);
             }
         });
 
@@ -66,6 +69,7 @@ public class ShapeFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 msg_color = "yellow";
+                btn_yellow.setSelected(true);
             }
         });
 
@@ -73,6 +77,16 @@ public class ShapeFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 msg_color = "green";
+                btn_green.setSelected(true);
+
+            }
+        });
+
+        btn_other.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                msg_color = "other";
+                btn_other.setSelected(true);
 
             }
         });
@@ -84,7 +98,7 @@ public class ShapeFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 msg_shape = "shape";
-
+                btn_shape.setSelected(true);
             }
         });
 
@@ -92,6 +106,7 @@ public class ShapeFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 msg_shape = "text";
+                btn_text.setSelected(true);
             }
         });
 
@@ -99,7 +114,7 @@ public class ShapeFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 msg_shape = "all";
-
+                btn_shapeText.setSelected(true);
             }
         });
         // [END] Shape Buttons
