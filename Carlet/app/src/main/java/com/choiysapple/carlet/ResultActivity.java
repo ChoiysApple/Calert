@@ -31,7 +31,7 @@ public class ResultActivity extends AppCompatActivity {
         String msg_result = "<Result>\n";
         int index = 0;
         for (Symbol element : result){
-            msg_result += (Integer.toString(index+1)+") "+element.name + " " + element.description +"\n");
+            msg_result += (Integer.toString(index+1)+") "+element.name +"\n");
             index++;
         }
 

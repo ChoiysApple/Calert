@@ -21,7 +21,7 @@ public class ShapeFragment extends Fragment{
     Button btn_red, btn_yellow, btn_green, btn_other;       // color buttons
     Button btn_shape, btn_text, btn_shapeText;              // shape buttons
     Button btn_search, btn_reset;                           // Confirm buttons
-    String msg_color, msg_shape;                            // options
+    String msg_color = "all", msg_shape = "all";            // options
 
 
     @Override
