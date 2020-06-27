@@ -77,6 +77,11 @@ public class SymbolDataManager implements Serializable {
         symbols.add(new Symbol("자동 와이퍼 작동", "symbol64", "yellow", "all", ""));
     }
 
+
+    /*
+    Model functions
+    */
+
     // for Shape search
     public ArrayList<Symbol> getShapeSearchResult(String color, String shape){
         ArrayList<Symbol> result = (ArrayList<Symbol>) symbols.clone();
@@ -110,6 +115,8 @@ public class SymbolDataManager implements Serializable {
         Log.d(color+shape+":", msg_result);
         return result;
     }
+
+
 
     // for search by text
     public ArrayList<Symbol> getTextSearchResult(String keyword){

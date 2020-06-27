@@ -18,23 +18,10 @@ import android.widget.Toast;
 
 public class ShapeFragment extends Fragment{
 
-    // color buttons
-    Button btn_red;
-    Button btn_yellow;
-    Button btn_green;
-
-    // shape buttons
-    Button btn_shape;
-    Button btn_text;
-    Button btn_shapeText;
-
-    // Confirm buttons
-    Button btn_search;
-    Button btn_reset;
-
-    // options
-    String msg_color;
-    String msg_shape;
+    Button btn_red, btn_yellow, btn_green, btn_other;       // color buttons
+    Button btn_shape, btn_text, btn_shapeText;              // shape buttons
+    Button btn_search, btn_reset;                           // Confirm buttons
+    String msg_color, msg_shape;                            // options
 
 
     @Override
@@ -47,6 +34,7 @@ public class ShapeFragment extends Fragment{
         btn_red = view.findViewById(R.id.btn_red);
         btn_yellow = view.findViewById(R.id.btn_yellow);
         btn_green = view.findViewById(R.id.btn_green);
+        btn_other = view.findViewById(R.id.btn_other);
         btn_shape = view.findViewById(R.id.btn_shape);
         btn_text = view.findViewById(R.id.btn_text);
         btn_shapeText = view.findViewById(R.id.btn_shapeText);
@@ -73,6 +61,14 @@ public class ShapeFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 msg_color = "green";
+
+            }
+        });
+
+        btn_other.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                msg_color = "other";
 
             }
         });
