@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="shape"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        //Shape Search
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shape Search"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold">
+        </TextView>
+
+        //Shape Search 밑 회색줄
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorGrey" />
+
+        //Color 옵션
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="   Color"
+            android:textColor="@color/colorDarkGrey"
+            android:textSize="20sp"
+            android:textStyle="bold">
+        </TextView>
+
+        // Color 옵션 버튼 - 빨/노/초
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_red"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_shape"
+                android:padding="5dp"
+                android:text="RED"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="15dp"
+                android:drawableTop="@drawable/color_red"/>
+
+            <Button
+                android:id="@+id/btn_yellow"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_shape"
+                android:text="YELLOW"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="15dp"
+                android:drawableTop="@drawable/color_yellow"/>
+
+            <Button
+                android:id="@+id/btn_green"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_shape"
+                android:text="GREEN"
+                android:textColor="@android:color/holo_green_light"
+                android:textSize="15dp"
+                android:drawableTop="@drawable/color_green"/>
+
+            <Button
+                android:id="@+id/btn_other"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_shape"
+                android:text="OTHER"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="15dp"
+                android:drawableTop="@drawable/color_other"/>
+
+        </LinearLayout>
+
+        //Shape 옵션
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="   Shape"
+            android:textColor="@color/colorDarkGrey"
+            android:textSize="20sp"
+            android:textStyle="bold"></TextView>
+
+        //Shape 옵션 버튼 - shape/text/shape+text
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_shape"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_shape"
+                android:text="Shape"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="15sp"
+                android:drawableTop="@drawable/shape_shape"/>
+
+            <Button
+                android:id="@+id/btn_text"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_shape"
+                android:text="Text"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="15sp"
+                android:drawableTop="@drawable/shape_text"/>
+
+            <Button
+                android:id="@+id/btn_shapeText"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/button_shape"
+                android:text="Shape+Text"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="15sp"
+                android:drawableTop="@drawable/shape_shapetext"/>
+
+
+        </LinearLayout>
+
+        //안내문 When nothing selected, search everything from the category
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="When nothing selected, search everything from the category"
+            android:textAlignment="center"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12sp"
+            android:textStyle="bold"></TextView>
+
+        // Search/Reset 버튼
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="80dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/search_button_shape"
+                android:text="Search"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btn_reset"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/reset_button_shape"
+                android:text="Reset"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>
