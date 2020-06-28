@@ -1,7 +1,10 @@
 package com.choiysapple.carlet;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
+import androidx.appcompat.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.mainFrame, browseFragment).commitAllowingStateLoss();
 
-
         // bottom navigation click action
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -60,5 +62,26 @@ public class MainActivity extends AppCompatActivity {
     }       //[END] of OnCreate
 
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.main, menu);
+        SearchView searchView = (SearchView)menu.findItem(R.id.action_search).getActionView();
+        searchView.setMaxWidth(Integer.MAX_VALUE);
+
+        searchView.setQueryHint("이름으로 검색합니다");
+        MenuItem item_like = menu.add(0, 0, 0, "히든메뉴");
+        item_like.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+
+                intent.putExtra("keyword", 12);
+                startActivity(intent);
+                return true;
+            }
+        });
+
+        return true;
+    }
 
 }
