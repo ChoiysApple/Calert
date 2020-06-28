@@ -6,13 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.GridView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class ResultActivity extends AppCompatActivity {
 
-    TextView textView;
     ArrayList<Symbol> result;
 
     @Override
@@ -20,7 +20,6 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        textView = findViewById(R.id.textview);
 
         Intent passedIntent = getIntent();
         if (passedIntent != null){
@@ -35,6 +34,8 @@ public class ResultActivity extends AppCompatActivity {
             index++;
         }
 
-        textView.setText(msg_result);
+        GridView gv = findViewById(R.id.mygrid);
+        gv.setAdapter(new SearchImageAdapter(this, result));
+
     }
 }

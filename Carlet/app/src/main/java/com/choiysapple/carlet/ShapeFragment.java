@@ -110,14 +110,15 @@ public class ShapeFragment extends Fragment{
                 // send symbol ArrayList to ResultActivity
                 Intent intent = new Intent(getActivity(), ResultActivity.class);
                 intent.putExtra("symbolData", dataManager.getShapeSearchResult(msg_color, msg_shape));
-                startActivityForResult(intent, 101);
+                startActivity(intent);
             }
         });
 
         btn_reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                msg_color = "all";
+                msg_shape = "all";
             }
         }); // [END] Confirm Buttons
 

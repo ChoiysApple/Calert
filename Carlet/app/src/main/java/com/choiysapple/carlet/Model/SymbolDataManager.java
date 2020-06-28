@@ -2,6 +2,8 @@ package com.choiysapple.carlet.Model;
 
 import android.util.Log;
 
+import com.choiysapple.carlet.R;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -11,70 +13,70 @@ public class SymbolDataManager implements Serializable {
 
     // Symbols data
     public SymbolDataManager() {
-        symbols.add(new Symbol("전면 안개등", "symbol1", "green", "shape", "전면 안개등 이상 발생")); // 1
-        symbols.add(new Symbol("파워 스티어링 경고", "symbol2", "red", "shape", "전동 파워 스티어링 시스템 문제 발생"));
-        symbols.add(new Symbol("후면 안개등", "symbol3", "yellow", "shape", "후면 안개등 이상 발생"));
-        symbols.add(new Symbol("워셔 액 부족", "symbol4", "yellow", "shape", "워셔 액 부족"));
-        symbols.add(new Symbol("브레이크 패드 경고", "symbol5", "yellow", "shape", "브레이크 패드 이상 발생 (마모 등)"));
-        symbols.add(new Symbol("정속 주행 켜짐", "symbol6", "yellow", "shape", ""));
-        symbols.add(new Symbol("방향 지시등", "symbol7", "green", "shape", "방향 지시등 이상 발생"));
-        symbols.add(new Symbol("빗방울, 빛 감지", "symbol8", "yellow", "shape", ""));
-        symbols.add(new Symbol("동절기 모드", "symbol9", "other", "shape", "외부 온도가 낮으므로 도로 결빙 주의"));
-        symbols.add(new Symbol("정보 표시 장치", "symbol10", "other", "shape", "")); // 10
-        symbols.add(new Symbol("예열 플러그 / 디젤 예열 경고", "symbol11", "yellow", "shape", "예열 플러그 교체 필요"));
-        symbols.add(new Symbol("서리 주의", "symbol12", "other", "shape", ""));
-        symbols.add(new Symbol("점화스위치 경고", "symbol13", "red", "shape", "시동을 켜는 장치에 문제 발생"));
-        symbols.add(new Symbol("차내 열쇠 없음", "symbol14", "yellow", "shape", "차내 열쇠 없음"));
-        symbols.add(new Symbol("전자 열쇠 배터리 부족", "symbol15", "red", "shape", "전자 열쇠 배터리 부족"));
-        symbols.add(new Symbol("차간 거리 경보 장치", "symbol16", "red", "shape", "차간 거리가 가까움"));
-        symbols.add(new Symbol("클러치 페달 밟기", "symbol17", "red", "shape", ""));
-        symbols.add(new Symbol("브레이크 페달 밟기", "symbol18", "green", "shape", ""));
-        symbols.add(new Symbol("스티어링 잠금장치", "symbol19", "red", "shape", ""));
-        symbols.add(new Symbol("전조등", "symbol20", "other", "shape", "")); // 20
-        symbols.add(new Symbol("타이어 압력 부족", "symbol21", "yellow", "shape", "타이어 공기압이 기준치 이하인 상태"));
-        symbols.add(new Symbol("차포등 정보", "symbol22", "green", "shape", ""));
-        symbols.add(new Symbol("외부 경관등 결함", "symbol23", "yellow", "shape", ""));
-        symbols.add(new Symbol("브레이크 등 경보", "symbol24", "red", "shape", ""));
-        symbols.add(new Symbol("디젤 배기가스 후처리 장치 경보", "symbol25", "yellow", "shape", ""));
-        symbols.add(new Symbol("트레일러 견인장치", "symbol26", "red", "shape", ""));
-        symbols.add(new Symbol("공기 현가 장치 경고", "symbol27", "red", "shape", ""));
-        symbols.add(new Symbol("차선 이탈", "symbol28", "green", "shape", "차선 이탈"));
-        symbols.add(new Symbol("촉매 변환 장치 경고", "symbol29", "red", "shape", "촉매 장치 과열"));
-        symbols.add(new Symbol("안전벨트 미착용", "symbol30", "red", "shape", "안전벨트 착용 요망")); // 30
-        symbols.add(new Symbol("주차 브레이크 등", "symbol31", "red", "shape", ""));
-        symbols.add(new Symbol("배터리 경고", "symbol32", "red", "shape", "배터리 또는 충전 계통에 문제 발생"));
-        symbols.add(new Symbol("주차 보조장치", "symbol33", "other", "shape", ""));
-        symbols.add(new Symbol("오일교환 등 서비스 요망", "symbol34", "yellow", "shape", ""));
-        symbols.add(new Symbol("자동 전조등", "symbol35", "yellow", "shape", ""));
-        symbols.add(new Symbol("전조등 범위 조정기", "symbol36", "yellow", "shape", ""));
-        symbols.add(new Symbol("후방 스포일러 경고", "symbol37", "red", "shape", ""));
-        symbols.add(new Symbol("컨버터블 천장 경고", "symbol38", "red", "shape", ""));
-        symbols.add(new Symbol("에어백 경고", "symbol39", "red", "shape", "에어백 시스템에 문제 발생"));
-        symbols.add(new Symbol("핸드 브레이크 경고", "symbol40", "red", "shape", "핸드 브레이크 작동 상태에서 주행, 브레이크 오일 부족이나 유압에 문제")); // 40
-        symbols.add(new Symbol("연료필터에 물 있음", "symbol41", "red", "shape", "연료필터에 물 있음"));
-        symbols.add(new Symbol("에어백 비활성화", "symbol42", "yellow", "shape", ""));
-        symbols.add(new Symbol("결합 문제", "symbol43", "yellow", "shape", ""));
-        symbols.add(new Symbol("전조등 하향", "symbol44", "green", "shape", ""));
-        symbols.add(new Symbol("에어 필터 더러움", "symbol45", "other", "shape", ""));
-        symbols.add(new Symbol("경제운전 지시기", "symbol46", "green", "text", ""));
-        symbols.add(new Symbol("내리막길 주행 제어 장치", "symbol47", "yellow", "shape", ""));
-        symbols.add(new Symbol("온도 주의", "symbol48", "red", "shape", "엔진 과열 주의"));
-        symbols.add(new Symbol("ABS 잠김 방지 브레이크 경고", "symbol49", "yellow", "other", "ABS 기능에 문제 발생"));
-        symbols.add(new Symbol("연료 필터 주의", "symbol50", "yellow", "shape", "연료 필터에 수분 혼입됨")); // 50
-        symbols.add(new Symbol("문 열림", "symbol51", "red", "shape", "문이 제대로 닫히지 않았을 때 경고"));
-        symbols.add(new Symbol("보닛 열림", "symbol52", "red", "shape", "보닛이 열렸을 때 경고"));
-        symbols.add(new Symbol("연료 부족", "symbol53", "red", "shape", "남은 연료가 기준치 이하"));
-        symbols.add(new Symbol("자동기어박스 경고", "symbol54", "red", "shape", ""));
-        symbols.add(new Symbol("속도제한기", "symbol55", "other", "shape", ""));
-        symbols.add(new Symbol("현가장치 조절", "symbol56", "yellow", "shape", ""));
-        symbols.add(new Symbol("유압부족", "symbol57", "red", "shape", "엔진오일 압력 부족"));
-        symbols.add(new Symbol("앞유리창 성애제거", "symbol58", "yellow", "shape", ""));
-        symbols.add(new Symbol("트렁크 열림", "symbol59", "red", "shape", "트렁크가 열렸을 때 경고"));
-        symbols.add(new Symbol("주행 안정 제어 장치 꺼짐", "symbol60", "yellow", "shape", "관련 센서 및 장비에 문제가 생기거나 동작 버튼이 꺼져있는 경우")); // 60
-        symbols.add(new Symbol("빗물 감지기", "symbol61", "yellow", "shape", ""));
-        symbols.add(new Symbol("엔진 / 배출 경고", "symbol62", "yellow", "shape", "엔진 제어 계통에 문제 발생"));
-        symbols.add(new Symbol("뒷유리창 성애 제거", "symbol63", "yellow", "shape", ""));
-        symbols.add(new Symbol("자동 와이퍼 작동", "symbol64", "yellow", "other", ""));
+        symbols.add(new Symbol("전면 안개등", R.drawable.symbol1, "green", "shape", "전면 안개등 이상 발생")); // 1
+        symbols.add(new Symbol("파워 스티어링 경고", R.drawable.symbol2, "red", "shape", "전동 파워 스티어링 시스템 문제 발생"));
+        symbols.add(new Symbol("후면 안개등", R.drawable.symbol3, "yellow", "shape", "후면 안개등 이상 발생"));
+        symbols.add(new Symbol("워셔 액 부족", R.drawable.symbol4, "yellow", "shape", "워셔 액 부족"));
+        symbols.add(new Symbol("브레이크 패드 경고", R.drawable.symbol5, "yellow", "shape", "브레이크 패드 이상 발생 (마모 등)"));
+        symbols.add(new Symbol("정속 주행 켜짐", R.drawable.symbol6, "yellow", "shape", ""));
+        symbols.add(new Symbol("방향 지시등", R.drawable.symbol7, "green", "shape", "방향 지시등 이상 발생"));
+        symbols.add(new Symbol("빗방울, 빛 감지", R.drawable.symbol8, "yellow", "shape", ""));
+        symbols.add(new Symbol("동절기 모드", R.drawable.symbol9, "other", "shape", "외부 온도가 낮으므로 도로 결빙 주의"));
+        symbols.add(new Symbol("정보 표시 장치", R.drawable.symbol10, "other", "shape", "")); // 10
+        symbols.add(new Symbol("예열 플러그 / 디젤 예열 경고", R.drawable.symbol11, "yellow", "shape", "예열 플러그 교체 필요"));
+        symbols.add(new Symbol("서리 주의", R.drawable.symbol12, "other", "shape", ""));
+        symbols.add(new Symbol("점화스위치 경고", R.drawable.symbol13, "red", "shape", "시동을 켜는 장치에 문제 발생"));
+        symbols.add(new Symbol("차내 열쇠 없음", R.drawable.symbol14, "yellow", "shape", "차내 열쇠 없음"));
+        symbols.add(new Symbol("전자 열쇠 배터리 부족", R.drawable.symbol15, "red", "shape", "전자 열쇠 배터리 부족"));
+        symbols.add(new Symbol("차간 거리 경보 장치", R.drawable.symbol16, "red", "shape", "차간 거리가 가까움"));
+        symbols.add(new Symbol("클러치 페달 밟기", R.drawable.symbol17, "red", "shape", ""));
+        symbols.add(new Symbol("브레이크 페달 밟기", R.drawable.symbol18, "green", "shape", ""));
+        symbols.add(new Symbol("스티어링 잠금장치", R.drawable.symbol19, "red", "shape", ""));
+        symbols.add(new Symbol("전조등", R.drawable.symbol20, "other", "shape", "")); // 20
+        symbols.add(new Symbol("타이어 압력 부족", R.drawable.symbol21, "yellow", "shape", "타이어 공기압이 기준치 이하인 상태"));
+        symbols.add(new Symbol("차포등 정보", R.drawable.symbol22, "green", "shape", ""));
+        symbols.add(new Symbol("외부 경관등 결함", R.drawable.symbol23, "yellow", "shape", ""));
+        symbols.add(new Symbol("브레이크 등 경보", R.drawable.symbol24, "red", "shape", ""));
+        symbols.add(new Symbol("디젤 배기가스 후처리 장치 경보", R.drawable.symbol25, "yellow", "shape", ""));
+        symbols.add(new Symbol("트레일러 견인장치", R.drawable.symbol26, "red", "shape", ""));
+        symbols.add(new Symbol("공기 현가 장치 경고", R.drawable.symbol27, "red", "shape", ""));
+        symbols.add(new Symbol("차선 이탈", R.drawable.symbol28, "green", "shape", "차선 이탈"));
+        symbols.add(new Symbol("촉매 변환 장치 경고", R.drawable.symbol29, "red", "shape", "촉매 장치 과열"));
+        symbols.add(new Symbol("안전벨트 미착용", R.drawable.symbol30, "red", "shape", "안전벨트 착용 요망")); // 30
+        symbols.add(new Symbol("주차 브레이크 등", R.drawable.symbol31, "red", "shape", ""));
+        symbols.add(new Symbol("배터리 경고", R.drawable.symbol32, "red", "shape", "배터리 또는 충전 계통에 문제 발생"));
+        symbols.add(new Symbol("주차 보조장치", R.drawable.symbol33, "other", "shape", ""));
+        symbols.add(new Symbol("오일교환 등 서비스 요망", R.drawable.symbol34, "yellow", "shape", ""));
+        symbols.add(new Symbol("자동 전조등", R.drawable.symbol35, "yellow", "shape", ""));
+        symbols.add(new Symbol("전조등 범위 조정기", R.drawable.symbol36, "yellow", "shape", ""));
+        symbols.add(new Symbol("후방 스포일러 경고", R.drawable.symbol37, "red", "shape", ""));
+        symbols.add(new Symbol("컨버터블 천장 경고", R.drawable.symbol38, "red", "shape", ""));
+        symbols.add(new Symbol("에어백 경고", R.drawable.symbol39, "red", "shape", "에어백 시스템에 문제 발생"));
+        symbols.add(new Symbol("핸드 브레이크 경고", R.drawable.symbol40, "red", "shape", "핸드 브레이크 작동 상태에서 주행, 브레이크 오일 부족이나 유압에 문제")); // 40
+        symbols.add(new Symbol("연료필터에 물 있음", R.drawable.symbol41, "red", "shape", "연료필터에 물 있음"));
+        symbols.add(new Symbol("에어백 비활성화", R.drawable.symbol42, "yellow", "shape", ""));
+        symbols.add(new Symbol("결합 문제", R.drawable.symbol43, "yellow", "shape", ""));
+        symbols.add(new Symbol("전조등 하향", R.drawable.symbol44, "green", "shape", ""));
+        symbols.add(new Symbol("에어 필터 더러움", R.drawable.symbol45, "other", "shape", ""));
+        symbols.add(new Symbol("경제운전 지시기", R.drawable.symbol46, "green", "text", ""));
+        symbols.add(new Symbol("내리막길 주행 제어 장치", R.drawable.symbol47, "yellow", "shape", ""));
+        symbols.add(new Symbol("온도 주의", R.drawable.symbol48, "red", "shape", "엔진 과열 주의"));
+        symbols.add(new Symbol("ABS 잠김 방지 브레이크 경고", R.drawable.symbol49, "yellow", "other", "ABS 기능에 문제 발생"));
+        symbols.add(new Symbol("연료 필터 주의", R.drawable.symbol50, "yellow", "shape", "연료 필터에 수분 혼입됨")); // 50
+        symbols.add(new Symbol("문 열림", R.drawable.symbol51, "red", "shape", "문이 제대로 닫히지 않았을 때 경고"));
+        symbols.add(new Symbol("보닛 열림", R.drawable.symbol52, "red", "shape", "보닛이 열렸을 때 경고"));
+        symbols.add(new Symbol("연료 부족", R.drawable.symbol53, "red", "shape", "남은 연료가 기준치 이하"));
+        symbols.add(new Symbol("자동기어박스 경고", R.drawable.symbol54, "red", "shape", ""));
+        symbols.add(new Symbol("속도제한기", R.drawable.symbol55, "other", "shape", ""));
+        symbols.add(new Symbol("현가장치 조절", R.drawable.symbol56, "yellow", "shape", ""));
+        symbols.add(new Symbol("유압부족", R.drawable.symbol57, "red", "shape", "엔진오일 압력 부족"));
+        symbols.add(new Symbol("앞유리창 성애제거", R.drawable.symbol58, "yellow", "shape", ""));
+        symbols.add(new Symbol("트렁크 열림", R.drawable.symbol59, "red", "shape", "트렁크가 열렸을 때 경고"));
+        symbols.add(new Symbol("주행 안정 제어 장치 꺼짐", R.drawable.symbol60, "yellow", "shape", "관련 센서 및 장비에 문제가 생기거나 동작 버튼이 꺼져있는 경우")); // 60
+        symbols.add(new Symbol("빗물 감지기", R.drawable.symbol61, "yellow", "shape", ""));
+        symbols.add(new Symbol("엔진 / 배출 경고", R.drawable.symbol62, "yellow", "shape", "엔진 제어 계통에 문제 발생"));
+        symbols.add(new Symbol("뒷유리창 성애 제거", R.drawable.symbol63, "yellow", "shape", ""));
+        symbols.add(new Symbol("자동 와이퍼 작동", R.drawable.symbol64, "yellow", "other", ""));
     }
 
 
