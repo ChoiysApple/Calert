@@ -2,6 +2,7 @@ package com.choiysapple.carlet;
 
 import com.choiysapple.carlet.Model.*;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -47,6 +48,7 @@ public class ShapeFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 msg_color = "red";
+                buttonAnimation(0, btn_red);
             }
         });
 
@@ -54,6 +56,7 @@ public class ShapeFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 msg_color = "yellow";
+                buttonAnimation(0, btn_yellow);
             }
         });
 
@@ -61,7 +64,7 @@ public class ShapeFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 msg_color = "green";
-
+                buttonAnimation(0, btn_green);
             }
         });
 
@@ -69,7 +72,7 @@ public class ShapeFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 msg_color = "other";
-
+                buttonAnimation(0, btn_other);
             }
         });
         // [END] Color Buttons
@@ -80,7 +83,7 @@ public class ShapeFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 msg_shape = "shape";
-
+                buttonAnimation(1, btn_shape);
             }
         });
 
@@ -88,6 +91,7 @@ public class ShapeFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 msg_shape = "text";
+                buttonAnimation(1, btn_text);
             }
         });
 
@@ -95,7 +99,7 @@ public class ShapeFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 msg_shape = "all";
-
+                buttonAnimation(1, btn_shapeText);
             }
         });
         // [END] Shape Buttons
@@ -111,6 +115,8 @@ public class ShapeFragment extends Fragment{
                 Intent intent = new Intent(getActivity(), ResultActivity.class);
                 intent.putExtra("symbolData", dataManager.getShapeSearchResult(msg_color, msg_shape));
                 startActivity(intent);
+
+                resetButton();
             }
         });
 
@@ -119,15 +125,46 @@ public class ShapeFragment extends Fragment{
             public void onClick(View view) {
                 msg_color = "all";
                 msg_shape = "all";
+                resetButton();
             }
         }); // [END] Confirm Buttons
 
 
 
-
-
         return view;
     }
+
+    private void buttonAnimation(int row, Button target){
+        if (row == 0){
+            btn_red.setBackgroundResource(R.drawable.button_shape);
+            btn_yellow.setBackgroundResource(R.drawable.button_shape);
+            btn_green.setBackgroundResource(R.drawable.button_shape);
+            btn_other.setBackgroundResource(R.drawable.button_shape);
+
+            target.setBackgroundResource(R.drawable.button_shape_pressed);
+        }else if (row == 1){
+            btn_shape.setBackgroundResource(R.drawable.button_shape);
+            btn_text.setBackgroundResource(R.drawable.button_shape);
+            btn_shapeText.setBackgroundResource(R.drawable.button_shape);
+
+            target.setBackgroundResource(R.drawable.button_shape_pressed);
+        }else{
+            Log.d("buttonAnimation", "invalid row");
+        }
+    }
+
+    private void resetButton(){
+        btn_red.setBackgroundResource(R.drawable.button_shape);
+        btn_yellow.setBackgroundResource(R.drawable.button_shape);
+        btn_green.setBackgroundResource(R.drawable.button_shape);
+        btn_other.setBackgroundResource(R.drawable.button_shape);
+        btn_shape.setBackgroundResource(R.drawable.button_shape);
+        btn_text.setBackgroundResource(R.drawable.button_shape);
+        btn_shapeText.setBackgroundResource(R.drawable.button_shape);
+
+    }
+
+
 
 }
 
