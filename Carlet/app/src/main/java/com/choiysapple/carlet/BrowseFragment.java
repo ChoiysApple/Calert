@@ -48,7 +48,7 @@ public class BrowseFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 popupView = getLayoutInflater().inflate(R.layout.popup_window, null);
-                PopupWindow popUp = new PopupWindow(popupView, 1000, LinearLayout.LayoutParams.WRAP_CONTENT, true);
+                popUp = new PopupWindow(popupView, 1000, LinearLayout.LayoutParams.WRAP_CONTENT, true);
 
                 Button btn = popupView.findViewById(R.id.btn_Map);
                 ImageView logo = popupView.findViewById(R.id.logo);
@@ -60,7 +60,7 @@ public class BrowseFragment extends Fragment {
                 popUp.showAtLocation(popupView, Gravity.CENTER, 0, -300);
 
                 // load symbol data
-                logo.setImageResource(getResources().getIdentifier("symbol" + (position+1), "drawable", getActivity().getPackageName()));
+                logo.setImageResource(symbolArrayList.get(position).img);
                 name.setText(symbolArrayList.get(position).name);
                 desc.setText(symbolArrayList.get(position).description);
 
