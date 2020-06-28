@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.choiysapple.carlet">
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
@@ -14,10 +16,12 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAOPVgrDBAMIR6Xjl9r6cIsZH7iGmizvtA"/>
-        <activity android:name=".ResultActivity"></activity>
-        <activity android:name=".MapActivity"></activity>
-        <activity android:name=".MainActivity">
+            android:value="AIzaSyAOPVgrDBAMIR6Xjl9r6cIsZH7iGmizvtA" />
+
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".ResultActivity" />
+        <activity android:name=".MapActivity" />
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
