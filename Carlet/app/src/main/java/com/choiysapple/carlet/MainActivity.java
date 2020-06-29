@@ -1,6 +1,8 @@
 package com.choiysapple.carlet;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,6 +15,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.choiysapple.carlet.Model.SymbolDataManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.choiysapple.carlet.ThemeUtil;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -62,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });     //[END] of OnNavigationItemSelectedListener
+
+
+        // set dark mode option
+        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        ThemeUtil.applyTheme(sharedPref.getString(String.valueOf(R.string.darkmode_options), ThemeUtil.LIGHT_MODE));
 
     }       //[END] of OnCreate
 

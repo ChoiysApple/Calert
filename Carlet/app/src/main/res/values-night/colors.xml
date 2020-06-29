@@ -5,7 +5,7 @@
     <color name="colorGrey">#bfbfbf</color>
     <color name="colorDarkGrey">#808080</color>
     <color name="colorAccent">#a4e667</color>
-    <color name="colorBackground">@android:color/white</color>
-    <color name="menuItem">@android:color/darker_gray</color>
+    <color name="colorBackground">#121212</color>
+    <color name="menuItem">@android:color/white</color>
 
 </resources>

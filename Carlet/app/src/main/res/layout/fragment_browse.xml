@@ -37,6 +37,7 @@
         android:verticalSpacing="30dp"
         android:horizontalSpacing="1dp"
         android:gravity="center"
+        android:background="@color/colorBackground"
         android:clickable="true" />
 
 </LinearLayout>

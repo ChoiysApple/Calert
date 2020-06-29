@@ -27,16 +27,36 @@
             android:layout_centerInParent="true"
             android:layout_marginTop="1dp"/>
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
         <Button
             android:id="@+id/btn_DarkMode"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="     Dark mode"
             android:textSize="18sp"
             android:textColor="@color/colorDarkGrey"
             android:gravity="left|center_vertical"
             android:background="@color/colorBackground"
-            android:drawableRight="@drawable/settings_arrow"/>
+            style="@style/Widget.AppCompat.Button.Borderless"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/colorBackground"/>
+
+            <Switch
+                android:id="@+id/switch_darkMode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"/>
+
+        </LinearLayout>
 
         <View
             android:layout_width="match_parent"
