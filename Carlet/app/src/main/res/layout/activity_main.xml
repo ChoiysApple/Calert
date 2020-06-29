@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@android:color/white"
+    android:background="@color/colorBackground"
     android:orientation="vertical">
 
 
@@ -30,7 +30,7 @@
         android:id="@+id/main_bottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
+        android:background="@color/colorBackground"
         android:layout_gravity="bottom"
         android:layout_alignParentBottom="true"
         app:menu="@menu/main_navigation" />

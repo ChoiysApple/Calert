@@ -136,7 +136,7 @@ public class SymbolDataManager implements Serializable {
     // for search by text
     public ArrayList<Symbol> getTextSearchResult(String keyword){
         ArrayList<Symbol> result = (ArrayList<Symbol>) symbols.clone();
-        
+
         int index = 0;
         ArrayList<Integer> target = new ArrayList<Integer>();
         // return symbols whose name contains keyword

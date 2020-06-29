@@ -41,7 +41,7 @@
         android:layout_centerInParent="true"
         android:text="Calert"
         android:textStyle="bold|italic"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorBackground"
         android:textSize="48dp"/>
 
 

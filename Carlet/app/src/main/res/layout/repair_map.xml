@@ -22,7 +22,7 @@
         android:layout_weight="0.1"
         android:layout_marginBottom="5dp"
         android:background="@drawable/search_button_shape"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorBackground"
         android:textSize="15sp"
         android:id="@+id/button"/>
 

@@ -17,7 +17,7 @@
             android:textSize="18sp"
             android:textColor="@color/colorDarkGrey"
             android:gravity="left|center_vertical"
-            android:background="@android:color/white"
+            android:background="@color/colorBackground"
             android:drawableRight="@drawable/settings_arrow"/>
 
         <View
@@ -35,7 +35,7 @@
             android:textSize="18sp"
             android:textColor="@color/colorDarkGrey"
             android:gravity="left|center_vertical"
-            android:background="@android:color/white"
+            android:background="@color/colorBackground"
             android:drawableRight="@drawable/settings_arrow"/>
 
         <View
@@ -53,7 +53,7 @@
             android:textSize="18sp"
             android:textColor="@color/colorDarkGrey"
             android:gravity="left|center_vertical"
-            android:background="@android:color/white"
+            android:background="@color/colorBackground"
             android:drawableRight="@drawable/settings_arrow"/>
 
         <View
