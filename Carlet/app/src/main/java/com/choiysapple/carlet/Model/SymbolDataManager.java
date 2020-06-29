@@ -111,7 +111,7 @@ public class SymbolDataManager implements Serializable {
             }
             index++;
         }
-        Log.d("Non matching symbols", target.toString());
+//        Log.d("Non matching symbols", target.toString());
 
         // delete
         for (Integer i: target){
@@ -119,13 +119,15 @@ public class SymbolDataManager implements Serializable {
             result.remove(symbols.get(i));
         }
 
-        index = 0;
-        for (Symbol element: result){
-            msg_result += (Integer.toString(index+1)+") "+element.name + " / " + element.description +"\n");
-            index++;
-        }
+        // log
+//        index = 0;
+//        for (Symbol element: result){
+//            msg_result += (Integer.toString(index+1)+") "+element.name + " / " + element.description +"\n");
+//            index++;
+//        }
 
         Log.d("\n"+color+shape+":", msg_result);
+
         return result;
     }
 
@@ -133,25 +135,27 @@ public class SymbolDataManager implements Serializable {
 
     // for search by text
     public ArrayList<Symbol> getTextSearchResult(String keyword){
-
-        ArrayList<Symbol> result = new ArrayList<Symbol>();
-
+        ArrayList<Symbol> result = (ArrayList<Symbol>) symbols.clone();
+        
         int index = 0;
         ArrayList<Integer> target = new ArrayList<Integer>();
         // return symbols whose name contains keyword
         for (Symbol element : symbols){
             // condition check
-            if(element.name.contains(keyword)) {
+            if(!element.name.contains(keyword)) {
                 target.add(index);
+            }else{
+                Log.d("getTextSearchResult", element.name.toString());
             }
             index++;
         }
 
+        Log.d("getTextSearchResult", target.toString());
         for (Integer i: target){
-            result.remove(i);
+            result.remove(symbols.get(i));
         }
 
-        Log.d("Text Search Result:", result.toString());
+        Log.d("getTextSearchResult", result.toString());
         return  result;
     }
 

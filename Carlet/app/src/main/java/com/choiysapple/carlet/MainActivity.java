@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.choiysapple.carlet.Model.SymbolDataManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
@@ -17,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
     private FragmentManager fragmentManager = getSupportFragmentManager();
     FragmentTransaction transaction;
+
+    SymbolDataManager dataManager = new SymbolDataManager();
 
     // Fragments for each bottom navigation
     private BrowseFragment browseFragment = new BrowseFragment();
@@ -33,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Set initial fragment of bottom navigation
         transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.mainFrame, browseFragment).commitAllowingStateLoss();
+        transaction.replace(R.id.mainFrame, shapeFragment).commitAllowingStateLoss();
 
         // bottom navigation click action
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -69,15 +73,19 @@ public class MainActivity extends AppCompatActivity {
         searchView.setMaxWidth(Integer.MAX_VALUE);
 
         searchView.setQueryHint("이름으로 검색합니다");
-        MenuItem item_like = menu.add(0, 0, 0, "히든메뉴");
-        item_like.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public boolean onMenuItemClick(MenuItem item) {
+            public boolean onQueryTextSubmit(String query) {
+                // send symbol ArrayList to ResultActivity
                 Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
-
-                intent.putExtra("keyword", 12);
+                intent.putExtra("symbolData", dataManager.getTextSearchResult(query));
                 startActivity(intent);
-                return true;
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
             }
         });
 
