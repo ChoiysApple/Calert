@@ -10,10 +10,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.choiysapple.carlet.Model.SymbolDataManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    final SymbolDataManager dataManager = new SymbolDataManager();
 
     private FragmentManager fragmentManager = getSupportFragmentManager();
     FragmentTransaction transaction;
@@ -62,26 +66,35 @@ public class MainActivity extends AppCompatActivity {
     }       //[END] of OnCreate
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.main, menu);
-        SearchView searchView = (SearchView)menu.findItem(R.id.action_search).getActionView();
-        searchView.setMaxWidth(Integer.MAX_VALUE);
-
-        searchView.setQueryHint("이름으로 검색합니다");
-        MenuItem item_like = menu.add(0, 0, 0, "히든메뉴");
-        item_like.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
-
-                intent.putExtra("keyword", 12);
-                startActivity(intent);
-                return true;
-            }
-        });
-
-        return true;
-    }
-
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu){
+//        getMenuInflater().inflate(R.menu.main, menu);
+//        SearchView searchView = (SearchView)menu.findItem(R.id.action_search).getActionView();
+//        searchView.setMaxWidth(Integer.MAX_VALUE);
+//
+//        searchView.setQueryHint("이름으로 검색합니다");
+//        MenuItem item_like = menu.add(0, 0, 0, "히든메뉴");
+//        item_like.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+//            @Override
+//            public boolean onMenuItemClick(MenuItem item) {
+//                Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+//
+//                intent.putExtra("symbolData", dataManager.getTextSearchResult());
+//                startActivity(intent);
+//                return true;
+//            }
+//        });
+//
+//        return true;
+//    }
+//
+//    public boolean onOptionItemSelected(MenuItem item){
+//        int id = item.getItemId();
+//
+//        if(id == R.id.action_search){
+//            return true;
+//        }
+//
+//        return super.onOptionsItemSelected(item);
+//    }
 }
