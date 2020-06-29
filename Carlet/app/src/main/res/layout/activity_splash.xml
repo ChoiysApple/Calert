@@ -1,25 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashActivity">
+    android:background="@color/colorPrimary"
+    tools:context=".SplashActivity"
+    android:layout_gravity="center">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:backgroundTint="@color/colorPrimary"/>
+
+    <FrameLayout
+        android:id="@+id/logo"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/splash_logo"
+            android:layout_gravity="center"/>
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
         app:lottie_autoPlay="true"
         app:lottie_fileName="splash.json"
-        app:lottie_loop="false" />
+        app:lottie_loop="false"
+        android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+
+    <TextView
+        android:layout_below="@id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Calert"
+        android:textStyle="bold|italic"
+        android:textColor="@android:color/white"
+        android:textSize="48dp"/>
 
 
 
-</FrameLayout>
+
+</RelativeLayout>

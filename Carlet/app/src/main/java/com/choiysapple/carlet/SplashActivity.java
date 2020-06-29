@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.airbnb.lottie.LottieComposition;
+import com.airbnb.lottie.LottieDrawable;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -44,6 +46,7 @@ public class SplashActivity extends AppCompatActivity {
 
             }
         });
+
 
     }
 

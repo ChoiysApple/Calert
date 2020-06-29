@@ -46,7 +46,7 @@ public class SymbolDataManager implements Serializable {
         symbols.add(new Symbol("주차 브레이크 등", R.drawable.symbol31, "red", "shape", "주차 브레이크가 작동중이거나\n브레이크에 결함이 발생 시 점등\n브레이크를 풀어도 점등이 계속될 시\n정비소 방문 요함"));
         symbols.add(new Symbol("배터리 경고", R.drawable.symbol32, "red", "shape", "배터리 또는 충전 계통에 문제 발생"));
         symbols.add(new Symbol("주차 보조장치", R.drawable.symbol33, "other", "shape", "주변에 사물이 있음.\n충돌에 주의하세요"));
-        symbols.add(new Symbol("오일교환 등 서비스 요망", R.drawable.symbol34, "yellow", "shape", "오일 교환이 필요할 시에 점등"));
+        symbols.add(new Symbol("오일교환 요망", R.drawable.symbol34, "yellow", "shape", "오일 교환이 필요할 시에 점등"));
         symbols.add(new Symbol("자동 전조등", R.drawable.symbol35, "yellow", "shape", "자동 전조등 작동시 점등"));
         symbols.add(new Symbol("전조등 범위 조정기", R.drawable.symbol36, "yellow", "shape", "전조등 범위 조정기 작동시 점등\n점조등을 비추는 각도를 조정할 수 있음"));
         symbols.add(new Symbol("후방 스포일러 경고", R.drawable.symbol37, "red", "shape", "스포일러 작동 오류시 점등 \n 정비소 방문 요함"));
