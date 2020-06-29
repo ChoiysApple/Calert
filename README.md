@@ -6,7 +6,6 @@ Car Dashboard warning symbol finder
 * Android Studio
 * Minimum SDK level 21
 * JAVA based
-* [Lottie](https://airbnb.design/lottie/)
 * Architecture
   * MVP (Model-View-Presenter)
 
