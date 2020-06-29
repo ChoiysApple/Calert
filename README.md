@@ -10,7 +10,8 @@ Car Dashboard warning symbol finder
 * Architecture
   * MVP (Model-View-Presenter)
 
-
+## Library
+* [Lottie](https://airbnb.design/lottie/)
 
 ## Contributors
   * [@ChoiysApple](https://github.com/ChoiysApple)
