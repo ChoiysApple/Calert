@@ -1,11 +1,11 @@
 # Calert
 Car Dashboard warning symbol finder
 
-<img src="./media/splash.gif" width="20%" alt="Splash"></img>
-<img src="./media/browse.png" width="20%" alt="Browse"></img>
-<img src="./media/shape_search.gif" width="20%" alt="shape_search"></img>
-<img src="./media/popup.png" width="20%" alt="popup"></img>
-<img src="./media/text_search.gif" width="20%" alt="text_search"></img>
+<img src="./media/splash.gif" width="19%" alt="Splash"></img>
+<img src="./media/browse.png" width="19%" alt="Browse"></img>
+<img src="./media/shape_search.gif" width="19%" alt="shape_search"></img>
+<img src="./media/popup.png" width="19%" alt="popup"></img>
+<img src="./media/text_search.gif" width="19%" alt="text_search"></img>
 
 
 
