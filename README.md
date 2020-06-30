@@ -7,7 +7,7 @@ Car Dashboard warning symbol finder
 * Minimum SDK level 21
 * JAVA based
 * Architecture
-  * MVP (Model-View-Presenter)
+  * MVC (Model-View-Controller)
 
 ## Library
 * [Lottie](https://airbnb.design/lottie/)
