@@ -1,6 +1,7 @@
 # Calert
 Car Dashboard warning symbol finder
 
+<img src="https://twitter.com/i/status/1278084629895897088" width="20%" alt="dice"></img>
 
 ## Tech Stack
 * Android Studio
